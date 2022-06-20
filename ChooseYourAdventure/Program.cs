@@ -29,7 +29,7 @@ namespace ChooseYourAdventure
             if (noiseChoice == "NO")
             {
                 Console.WriteLine("Not much of an adventure if we don't leave our room!");
-                Console.WriteLine("THE END");
+                End.Main1();
             }
             else if (noiseChoice == "YES")
             {
@@ -56,12 +56,12 @@ namespace ChooseYourAdventure
                     {
                         Console.WriteLine("The door opens and NOTHING is there.");
                         Console.WriteLine("You turn off the light and run back to your room and lock the door.");
-                        Console.WriteLine("THE END.");
+                        End.Main1();
                     }
                     else
                     {
                         Console.WriteLine("You answered incorrectly.");
-                        Console.WriteLine("THE END.");
+                        End.Main1();
                     }
                 }
 
@@ -80,15 +80,16 @@ namespace ChooseYourAdventure
                         case "1":
                             Console.WriteLine("You choose the first key. Lucky choice!");
                             Console.WriteLine("The door opens and NOTHING is there.Strange...");
-                            Console.WriteLine("THE END.");
+                            End.Main1();
                             break;
                         case "2":
                             Console.WriteLine("You choose the secpnd key. The door doesn't open.");
-                            Console.WriteLine("THE END.");
+                            End.Main1();
                             break;
                         case "3":
                             Console.WriteLine("You choose the third key. the door doesn't open.");
-                            Console.WriteLine("THE END.");
+                            
+                            End.Main1();
                             break;
 
 
@@ -101,6 +102,13 @@ namespace ChooseYourAdventure
 
             }
             Console.ReadKey();
+        }
+    }
+     internal class End
+    {
+        public static void Main1()
+        {
+            Console.WriteLine("THE END.");
         }
     }
 }
